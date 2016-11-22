@@ -1,5 +1,3 @@
-WebView Finagler
+Desktop
 =====================
-
-This project demonstrates a simple OS X app that loads the google website in a `WebView` upon launch.
-
+Create desktop apps in Javascript. Lightweight alternative to Electron because of only supporting macOS (for now).
