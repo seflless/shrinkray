@@ -14,7 +14,7 @@
 		1E5AA0651DE4D08300AA696A /* MDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E5AA0611DE4D08300AA696A /* MDAppDelegate.m */; };
 		1E5AA0661DE4D08300AA696A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E5AA0631DE4D08300AA696A /* main.m */; };
 		1E5AA0691DE4D0F700AA696A /* desktop-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1E5AA0681DE4D0F700AA696A /* desktop-Info.plist */; };
-		1E5AA06D1DE4D22D00AA696A /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E5AA06B1DE4D22D00AA696A /* MainMenu.xib */; };
+		1E7F01891E9026CF00E352BF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E7F01881E9026CF00E352BF /* MainMenu.xib */; };
 		C168778216AFD5DC008FFFF0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C168778116AFD5DC008FFFF0 /* Cocoa.framework */; };
 		C168779F16AFD5E4008FFFF0 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C168779E16AFD5E4008FFFF0 /* WebKit.framework */; };
 /* End PBXBuildFile section */
@@ -29,12 +29,11 @@
 		1E5AA0641DE4D08300AA696A /* MDAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MDAppDelegate.h; path = desktop/MDAppDelegate.h; sourceTree = SOURCE_ROOT; };
 		1E5AA0671DE4D0F700AA696A /* desktop-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "desktop-Prefix.pch"; path = "desktop/desktop-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		1E5AA0681DE4D0F700AA696A /* desktop-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "desktop-Info.plist"; path = "desktop/desktop-Info.plist"; sourceTree = SOURCE_ROOT; };
-		1E5AA06C1DE4D22D00AA696A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = desktop/en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		1E7F01881E9026CF00E352BF /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainMenu.xib; path = desktop/MainMenu.xib; sourceTree = SOURCE_ROOT; };
 		C168777E16AFD5DC008FFFF0 /* desktop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = desktop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C168778116AFD5DC008FFFF0 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		C168778416AFD5DC008FFFF0 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
 		C168778616AFD5DC008FFFF0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		C168779716AFD5DC008FFFF0 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		C168779E16AFD5E4008FFFF0 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -66,7 +65,6 @@
 		C168777516AFD5DC008FFFF0 = {
 			isa = PBXGroup;
 			children = (
-				1E5AA06B1DE4D22D00AA696A /* MainMenu.xib */,
 				1E5AA0561DE4D02A00AA696A /* Resources */,
 				C168778716AFD5DC008FFFF0 /* Source */,
 				C168778016AFD5DC008FFFF0 /* Frameworks */,
@@ -104,11 +102,11 @@
 		C168778716AFD5DC008FFFF0 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				1E7F01881E9026CF00E352BF /* MainMenu.xib */,
 				1E5AA0671DE4D0F700AA696A /* desktop-Prefix.pch */,
 				1E5AA0611DE4D08300AA696A /* MDAppDelegate.m */,
 				1E5AA0631DE4D08300AA696A /* main.m */,
 				1E5AA0641DE4D08300AA696A /* MDAppDelegate.h */,
-				C168779616AFD5DC008FFFF0 /* MainMenu.xib */,
 			);
 			name = Source;
 			path = "WebView Finagler";
@@ -166,10 +164,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1E5AA06D1DE4D22D00AA696A /* MainMenu.xib in Resources */,
 				1E5AA0691DE4D0F700AA696A /* desktop-Info.plist in Resources */,
 				1E5AA05C1DE4D06E00AA696A /* en.lproj in Resources */,
 				1E5AA05E1DE4D06E00AA696A /* html in Resources */,
+				1E7F01891E9026CF00E352BF /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,25 +186,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		1E5AA06B1DE4D22D00AA696A /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1E5AA06C1DE4D22D00AA696A /* en */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-		C168779616AFD5DC008FFFF0 /* MainMenu.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C168779716AFD5DC008FFFF0 /* en */,
-			);
-			name = MainMenu.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		C168779916AFD5DC008FFFF0 /* Debug */ = {

@@ -12,16 +12,22 @@
 
 @implementation MDAppDelegate
 
++ (void)initialize {
+    [[NSUserDefaults standardUserDefaults] registerDefaults:@{@"WebKitDeveloperExtras": @YES,
+                                                              @"WebKitScriptDebuggerEnabled": @YES,
+                                                              @"WebKitScriptProfilerEnabled": @YES}];
+}
+
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     NSString* filePath = [[NSBundle mainBundle] pathForResource:@"index"
                                                          ofType:@"html"
                                                     inDirectory:@"html"];
-    
+        
     NSURL* fileURL = [NSURL fileURLWithPath:filePath];
 	NSURLRequest *request = [NSURLRequest requestWithURL:fileURL];
 
     
-    //NSLog(@"%@", filePath);
+    NSLog(@"%@", filePath);
     
 	[self.webView.mainFrame loadRequest:request];
 }
