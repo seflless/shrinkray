@@ -9,5 +9,5 @@ Create desktop apps in Javascript. Lightweight alternative to Electron because o
  - [ ] Menu
 
 Todo:
- - [ ] Shrinksize down further
- - [ ] Make a tool
+ - [ ] Decide on the name
+ - [ ] Create npm module and cli that gets basic functionality working
