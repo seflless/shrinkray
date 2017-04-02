@@ -10,9 +10,9 @@
     "test": "./bin/shrinkray.js -i tests/fixtures/simple -o build/hello.app",
     "build:app": "./tools/create-app-template.sh",
     "build:list": "xcodebuild -list -project desktop.xcodeproj",
-    "publish:patch": "npm run build:app; npm version patch; npm publish",
-    "publish:minor": "npm run build:app; npm version minor; npm publish",
-    "publish:major": "npm run build:app; npm version major; npm publish",
+    "publish:patch": "npm run build:app; npm version patch; git push; git push --tags; npm publish",
+    "publish:minor": "npm run build:app; npm version minor; git push; git push --tags; npm publish",
+    "publish:major": "npm run build:app; npm version major; git push; git push --tags; npm publish",
     "postinstall": "node ./bin/postinstall.js"
   },
   "repository": {
