@@ -2,3 +2,5 @@ desktop
 desktop.xcodeproj
 README.md
 LICENSE.md
+build
+bin/create-app-template.sh
