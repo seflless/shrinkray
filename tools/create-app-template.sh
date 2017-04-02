@@ -12,4 +12,4 @@ echo "Building desktop.app..."
 
 # Copy app to template directory
 echo "Copying to template..."
-cp -r build/Debug/desktop.app template/
+cd build/Debug/; zip -r -X ../../template/app.zip desktop.app

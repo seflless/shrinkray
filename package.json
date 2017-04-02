@@ -12,7 +12,8 @@
     "build:list": "xcodebuild -list -project desktop.xcodeproj",
     "publish:patch": "npm run build:app; npm version patch; npm publish",
     "publish:minor": "npm run build:app; npm version minor; npm publish",
-    "publish:major": "npm run build:app; npm version major; npm publish"
+    "publish:major": "npm run build:app; npm version major; npm publish",
+    "postinstall": "node ./bin/postinstall.js"
   },
   "repository": {
     "type": "git",
