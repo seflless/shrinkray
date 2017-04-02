@@ -2,7 +2,7 @@
 Create desktop apps in Javascript. Lightweight alternative to Electron because of only supporting macOS (for now).
 
 *Features*
- - [ ] CLI for converting a
+ - [ ] CLI for converting static website into a macOS app.
  - [x] Tiny App sizes (macOS: < 100K, Windows: N/A)
  - [x] Debuggable (Right-click window, select "Inspect Element")
  - [ ] Fullscreen API
@@ -17,7 +17,7 @@ npm install -g shrinkray
 
 #### Usage
 The input path must be to a folder that has an index.html in it, everything in the folder
-will be copied into the generated app and accessible. 
+will be copied into the generated app and accessible.
 
 ```
 shrinkray -i <project>/html -o example.app
