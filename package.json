@@ -7,8 +7,8 @@
     "shrinkray": "bin/shrinkray.js"
   },
   "scripts": {
-    "test": "npm test",
-    "build:app": "./bin/create-app-template.sh",
+    "test": "./bin/shrinkray.js -i tests/fixtures/simple -o build/hello.app",
+    "build:app": "./tools/create-app-template.sh",
     "build:list": "xcodebuild -list -project desktop.xcodeproj",
     "publish:patch": "npm run build:app; npm version patch; npm publish",
     "publish:minor": "npm run build:app; npm version minor; npm publish",
@@ -32,5 +32,9 @@
   "bugs": {
     "url": "https://github.com/francoislaberge/shrinkray/issues"
   },
-  "homepage": "https://github.com/francoislaberge/shrinkray#readme"
+  "homepage": "https://github.com/francoislaberge/shrinkray#readme",
+  "dependencies": {
+    "commander": "^2.9.0",
+    "fs-extra": "^2.1.2"
+  }
 }

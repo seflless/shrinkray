@@ -8,11 +8,7 @@ Create desktop apps in Javascript. Lightweight alternative to Electron because o
  - [ ] File Read/Write
  - [ ] Menu
 
-Todo:
- - [ ] Create npm module and cli that gets basic functionality working
-
-
-### Contributing
+#### Contributing
 
  1. Required Tools
    - [XCode](https://developer.apple.com/xcode/)
@@ -22,4 +18,12 @@ Todo:
         cd shrinkray
  3. Install Dependencies
         npm install
- 4. 
+ 4. Build App Template
+        npm run build:app
+ 5. Publish to npm
+        npm run publish:patch
+
+#### Todos
+  - [ ] Create npm module and cli that gets basic functionality working
+  - [ ] Consider making Shrinkray's design goals being to make desktop style javascript apps easy to make, but also if made
+        easy to host in a standard container that provides the same APIs as on desktop (Menus, file save/load, etc)'
