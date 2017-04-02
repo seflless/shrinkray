@@ -1,0 +1,25 @@
+{
+  "name": "shrinkray",
+  "version": "1.0.0",
+  "description": "Create desktop apps using HTML/CSS/Javascript",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/francoislaberge/shrinkray.git"
+  },
+  "keywords": [
+    "Desktop",
+    "App",
+    "Generator",
+    "CLI"
+  ],
+  "author": "Francois Laberge <francoislaberge@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/francoislaberge/shrinkray/issues"
+  },
+  "homepage": "https://github.com/francoislaberge/shrinkray#readme"
+}

@@ -33,3 +33,5 @@ xcuserdata/
 *.xcsettings
 *.xcworkspacedata
 *.xccheckout
+
+node_modules
