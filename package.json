@@ -3,8 +3,16 @@
   "version": "1.0.1",
   "description": "Create desktop apps using HTML/CSS/Javascript",
   "main": "lib/index.js",
+  "bin": {
+      "shrinkray": "bin/shrinkray.js"
+  },
   "scripts": {
-    "test": "npm test"
+    "test": "npm test",
+    "build:app": "./bin/create-app-template.sh",
+    "build:list": "xcodebuild -list -project desktop.xcodeproj",
+    "publish:patch": "npm run build:app; npm version patch; npm publish",
+    "publish:minor": "npm run build:app; npm version minor; npm publish",
+    "publish:major": "npm run build:app; npm version major; npm publish"
   },
   "repository": {
     "type": "git",

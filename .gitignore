@@ -35,3 +35,5 @@ xcuserdata/
 *.xccheckout
 
 node_modules
+npm-debug.log
+template
