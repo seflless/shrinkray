@@ -9,6 +9,12 @@ Create desktop apps in Javascript. Lightweight alternative to Electron because o
  - [ ] File Read/Write
  - [ ] Menu
 
+#### Example Apps
+
+<a href="https://github.com/francoislaberge/regulex/releases/download/v1.0.0/regulex.app.zip">
+  <img src=""/>
+</a>
+
 #### Installation
 
 ```
