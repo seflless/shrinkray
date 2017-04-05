@@ -11,9 +11,26 @@ Create desktop apps in Javascript. Lightweight alternative to Electron because o
 
 #### Example Apps
 
-<a href="https://github.com/francoislaberge/regulex/releases/download/v1.0.0/regulex.app.zip">
-  <img src="http://francoislaberge.com/shrinkray/images/regulex-app.png" width="50%"/>
-</a>
+<table>
+    <tr>
+        <td>
+            <a href="https://github.com/francoislaberge/regulex/releases/download/v1.0.0/regulex.app.zip">
+                <img src="http://francoislaberge.com/shrinkray/images/regulex-app.png"/>
+            </a>
+        </td>
+        <td>
+            <a href="https://github.com/francoislaberge/mini-paint/releases/download/v1.0.0/mini-paint.app.zip">
+                <img style="float:left;" src="http://francoislaberge.com/shrinkray/images//mini-paint-app.png"/>
+            </a>
+        </td>
+    </tr>
+    <tr>
+        <td>https://github.com/francoislaberge/regulex</td>
+        <td>https://github.com/francoislaberge/mini-paint</td>
+    </tr>
+</table>
+
+
 
 #### Installation
 
@@ -32,8 +49,8 @@ shrinkray -i <project>/html -o example.app
 ### Contributing
 
  1. Required Tools
-   - [XCode](https://developer.apple.com/xcode/)
-   - [Node/NPM](https://nodejs.org/en/download/)
+  - [XCode](https://developer.apple.com/xcode/)
+  - [Node/NPM](https://nodejs.org/en/download/)
  2. Clone the project
         git clone git@github.com:francoislaberge/shrinkray.git
         cd shrinkray
