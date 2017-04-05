@@ -32,16 +32,23 @@ shrinkray -i <project>/html -o example.app
 ### Contributing
 
  1. Required Tools
-   - [XCode](https://developer.apple.com/xcode/)
-   - [Node/NPM](https://nodejs.org/en/download/)
+     - [XCode](https://developer.apple.com/xcode/)
+     - [Node/NPM](https://nodejs.org/en/download/)
  2. Clone the project
+        
         git clone git@github.com:francoislaberge/shrinkray.git
         cd shrinkray
+        
  3. Install Dependencies
+        
         npm install
+        
  4. Build App Template
+        
         npm run build:app
+        
  5. Publish to npm
+        
         npm run publish:patch
 
 #### Todos
