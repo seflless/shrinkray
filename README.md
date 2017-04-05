@@ -20,7 +20,7 @@ Create desktop apps in Javascript. Lightweight alternative to Electron because o
         </td>
         <td>
             <a href="https://github.com/francoislaberge/mini-paint/releases/download/v1.0.0/mini-paint.app.zip">
-                <img style="float:left;" src="http://francoislaberge.com/shrinkray/images//mini-paint-app.png"/>
+                <img style="float:left;" src="http://francoislaberge.com/shrinkray/images/mini-paint-app.png"/>
             </a>
         </td>
     </tr>
