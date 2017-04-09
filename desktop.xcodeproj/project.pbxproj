@@ -14,6 +14,7 @@
 		1E5AA0651DE4D08300AA696A /* MDAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E5AA0611DE4D08300AA696A /* MDAppDelegate.m */; };
 		1E5AA0661DE4D08300AA696A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E5AA0631DE4D08300AA696A /* main.m */; };
 		1E5AA0691DE4D0F700AA696A /* desktop-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1E5AA0681DE4D0F700AA696A /* desktop-Info.plist */; };
+		1E69224B1E99E7E1002ECD99 /* tiny.c in Sources */ = {isa = PBXBuildFile; fileRef = 1E69224A1E99E7E1002ECD99 /* tiny.c */; };
 		1E7F01891E9026CF00E352BF /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E7F01881E9026CF00E352BF /* MainMenu.xib */; };
 		C168778216AFD5DC008FFFF0 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C168778116AFD5DC008FFFF0 /* Cocoa.framework */; };
 		C168779F16AFD5E4008FFFF0 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C168779E16AFD5E4008FFFF0 /* WebKit.framework */; };
@@ -29,6 +30,7 @@
 		1E5AA0641DE4D08300AA696A /* MDAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MDAppDelegate.h; path = desktop/MDAppDelegate.h; sourceTree = SOURCE_ROOT; };
 		1E5AA0671DE4D0F700AA696A /* desktop-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "desktop-Prefix.pch"; path = "desktop/desktop-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		1E5AA0681DE4D0F700AA696A /* desktop-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "desktop-Info.plist"; path = "desktop/desktop-Info.plist"; sourceTree = SOURCE_ROOT; };
+		1E69224A1E99E7E1002ECD99 /* tiny.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = tiny.c; path = desktop/tiny.c; sourceTree = SOURCE_ROOT; };
 		1E7F01881E9026CF00E352BF /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainMenu.xib; path = desktop/MainMenu.xib; sourceTree = SOURCE_ROOT; };
 		C168777E16AFD5DC008FFFF0 /* desktop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = desktop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C168778116AFD5DC008FFFF0 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -102,6 +104,7 @@
 		C168778716AFD5DC008FFFF0 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				1E69224A1E99E7E1002ECD99 /* tiny.c */,
 				1E7F01881E9026CF00E352BF /* MainMenu.xib */,
 				1E5AA0671DE4D0F700AA696A /* desktop-Prefix.pch */,
 				1E5AA0611DE4D08300AA696A /* MDAppDelegate.m */,
@@ -178,6 +181,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1E69224B1E99E7E1002ECD99 /* tiny.c in Sources */,
 				1E5AA05F1DE4D06E00AA696A /* LICENSE.md in Sources */,
 				1E5AA0601DE4D06E00AA696A /* README.md in Sources */,
 				1E5AA0651DE4D08300AA696A /* MDAppDelegate.m in Sources */,
