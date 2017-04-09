@@ -32,6 +32,7 @@
 		1E5AA0681DE4D0F700AA696A /* desktop-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "desktop-Info.plist"; path = "desktop/desktop-Info.plist"; sourceTree = SOURCE_ROOT; };
 		1E69224A1E99E7E1002ECD99 /* tiny.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = tiny.c; path = desktop/tiny.c; sourceTree = SOURCE_ROOT; };
 		1E7F01881E9026CF00E352BF /* MainMenu.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MainMenu.xib; path = desktop/MainMenu.xib; sourceTree = SOURCE_ROOT; };
+		1EA04B2F1E9A690300F037DE /* tiny.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = tiny.h; path = desktop/tiny.h; sourceTree = SOURCE_ROOT; };
 		C168777E16AFD5DC008FFFF0 /* desktop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = desktop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C168778116AFD5DC008FFFF0 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		C168778416AFD5DC008FFFF0 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -110,6 +111,7 @@
 				1E5AA0611DE4D08300AA696A /* MDAppDelegate.m */,
 				1E5AA0631DE4D08300AA696A /* main.m */,
 				1E5AA0641DE4D08300AA696A /* MDAppDelegate.h */,
+				1EA04B2F1E9A690300F037DE /* tiny.h */,
 			);
 			name = Source;
 			path = "WebView Finagler";

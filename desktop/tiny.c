@@ -13,6 +13,7 @@
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
+#include "tiny.h"
 #define VERSION 23
 #define BUFSIZE 8096
 #define ERROR      42
@@ -38,7 +39,12 @@ struct {
     {"tar", "image/tar" },
     {"htm", "text/html" },
     {"html","text/html" },
+    {"css","text/css" },
+    
+    {"xml","application/octet-stream" },
+    {"js","text/javascript" },
     {0,0} };
+const char* genericMimetype= "application/octet-stream";
 
 void logger(int type, char *s1, char *s2, int socket_fd)
 {
@@ -56,7 +62,7 @@ void logger(int type, char *s1, char *s2, int socket_fd)
             (void)write(socket_fd, "HTTP/1.1 404 Not Found\nContent-Length: 136\nConnection: close\nContent-Type: text/html\n\n<html><head>\n<title>404 Not Found</title>\n</head><body>\n<h1>Not Found</h1>\nThe requested URL was not found on this server.\n</body></html>\n",224);
             (void)sprintf(logbuffer,"NOT FOUND: %s:%s",s1, s2);
             break;
-        case LOG: (void)sprintf(logbuffer," INFO: %s:%s:%d",s1, s2,socket_fd); break;
+       // case LOG: (void)sprintf(logbuffer," INFO: %s:%s:%d",s1, s2,socket_fd); break;
     }
     /* No checks here, nothing can be done with a failure anyway */
     if((fd = open("nweb.log", O_CREAT| O_WRONLY | O_APPEND,0644)) >= 0) {
@@ -104,7 +110,12 @@ void web(int fd, int hit)
     
     /* work out the file type and check we support it */
     buflen=strlen(buffer);
-    fstr = (char *)0;
+    
+    
+    
+    // Disabled original code to support any file extension
+    fstr = genericMimetype;
+    /*fstr = (char *)0;
     for(i=0;extensions[i].ext != 0;i++) {
         len = strlen(extensions[i].ext);
         if( !strncmp(&buffer[buflen-len], extensions[i].ext, len)) {
@@ -113,6 +124,7 @@ void web(int fd, int hit)
         }
     }
     if(fstr == 0) logger(FORBIDDEN,"file extension type not supported",buffer,fd);
+    */
     
     if(( file_fd = open(&buffer[5],O_RDONLY)) == -1) {  /* open the file for reading */
         logger(NOTFOUND, "failed to open file",&buffer[5],fd);
@@ -135,55 +147,42 @@ void web(int fd, int hit)
 
 
 
-/*int main(int argc, char **argv)
+int serveFiles(char* dir, int port)
 {
-    int i, port, pid, listenfd, socketfd, hit;
+    int i, pid, listenfd, socketfd, hit;
     socklen_t length;
     static struct sockaddr_in cli_addr; // static = initialised to zeros
     static struct sockaddr_in serv_addr; // static = initialised to zeros
     
-    if( argc < 3  || argc > 3 || !strcmp(argv[1], "-?") ) {
-        (void)printf("hint: nweb Port-Number Top-Directory\t\tversion %d\n\n"
-                     "\tnweb is a small and very safe mini web server\n"
-                     "\tnweb only servers out file/web pages with extensions named below\n"
-                     "\t and only from the named directory or its sub-directories.\n"
-                     "\tThere is no fancy features = safe and secure.\n\n"
-                     "\tExample: nweb 8181 /home/nwebdir &\n\n"
-                     "\tOnly Supports:", VERSION);
-        for(i=0;extensions[i].ext != 0;i++)
-            (void)printf(" %s",extensions[i].ext);
-        
-        (void)printf("\n\tNot Supported: URLs including \"..\", Java, Javascript, CGI\n"
-                     "\tNot Supported: directories / /etc /bin /lib /tmp /usr /dev /sbin \n"
-                     "\tNo warranty given or implied\n\tNigel Griffiths nag@uk.ibm.com\n"  );
-        exit(0);
-    }
-    if( !strncmp(argv[2],"/"   ,2 ) || !strncmp(argv[2],"/etc", 5 ) ||
-       !strncmp(argv[2],"/bin",5 ) || !strncmp(argv[2],"/lib", 5 ) ||
-       !strncmp(argv[2],"/tmp",5 ) || !strncmp(argv[2],"/usr", 5 ) ||
-       !strncmp(argv[2],"/dev",5 ) || !strncmp(argv[2],"/sbin",6) ){
-        (void)printf("ERROR: Bad top directory %s, see nweb -?\n",argv[2]);
+    if( !strncmp(dir,"/"   ,2 ) || !strncmp(dir,"/etc", 5 ) ||
+       !strncmp(dir,"/bin",5 ) || !strncmp(dir,"/lib", 5 ) ||
+       !strncmp(dir,"/tmp",5 ) || !strncmp(dir,"/usr", 5 ) ||
+       !strncmp(dir,"/dev",5 ) || !strncmp(dir,"/sbin",6) ){
+        (void)printf("ERROR: Bad top directory %s, see nweb -?\n",dir);
         exit(3);
     }
-    if(chdir(argv[2]) == -1){
-        (void)printf("ERROR: Can't Change to directory %s\n",argv[2]);
+    if(chdir(dir) == -1){
+        (void)printf("ERROR: Can't Change to directory %s\n",dir);
         exit(4);
     }
     // Become deamon + unstopable and no zombies children (= no wait())
     if(fork() != 0)
         return 0; // parent returns OK to shell
+    
     (void)signal(SIGCLD, SIG_IGN); // ignore child death
     (void)signal(SIGHUP, SIG_IGN); // ignore terminal hangups
-    for(i=0;i<32;i++)
-        (void)close(i);    // close open files
+    //for(i=0;i<32;i++)
+//        (void)close(i);    // close open files
     (void)setpgrp();    // break away from process group
-    logger(LOG,"nweb starting",argv[1],getpid());
+    
+    logger(LOG,"nweb starting", port, getpid());
+    
     // setup the network socket
     if((listenfd = socket(AF_INET, SOCK_STREAM,0)) <0)
         logger(ERROR, "system call","socket",0);
-    port = atoi(argv[1]);
+    
     if(port < 0 || port >60000)
-        logger(ERROR,"Invalid port number (try 1->60000)",argv[1],0);
+        logger(ERROR,"Invalid port number (try 1->60000)",port,0);
     serv_addr.sin_family = AF_INET;
     serv_addr.sin_addr.s_addr = htonl(INADDR_ANY);
     serv_addr.sin_port = htons(port);
@@ -207,4 +206,4 @@ void web(int fd, int hit)
             }
         }
     }
-}*/
+}

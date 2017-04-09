@@ -8,7 +8,7 @@
 
 #import "MDAppDelegate.h"
 #import <WebKit/WebKit.h>
-
+#import "tiny.h"
 
 @implementation MDAppDelegate
 
@@ -23,11 +23,14 @@
                                                          ofType:@"html"
                                                     inDirectory:@"html"];
         
-    NSURL* fileURL = [NSURL fileURLWithPath:filePath];
+    
+    serveFiles("/Users/francoislaberge/dev/draw.io/docs", 8080);
+    
+    NSURL* fileURL = [NSURL URLWithString:@"http://localhost:8080"];
 	NSURLRequest *request = [NSURLRequest requestWithURL:fileURL];
 
     
-    NSLog(@"%@", filePath);
+    NSLog(@"%@", fileURL);
     
 	[self.webView.mainFrame loadRequest:request];
 }
