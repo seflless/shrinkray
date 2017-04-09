@@ -14,6 +14,11 @@ Create desktop apps in Javascript. Lightweight alternative to Electron because o
 <table>
     <tr>
         <td>
+            <a href="https://github.com/francoislaberge/draw.io/releases/download/v7.0.0/drawio.app.zip">
+                <img style="float:left;" src="http://francoislaberge.com/shrinkray/images/drawio-app.png"/>
+            </a>
+        </td>
+        <td>
             <a href="https://github.com/francoislaberge/regulex/releases/download/v1.0.0/regulex.app.zip">
                 <img src="http://francoislaberge.com/shrinkray/images/regulex-app.png"/>
             </a>
@@ -23,8 +28,10 @@ Create desktop apps in Javascript. Lightweight alternative to Electron because o
                 <img style="float:left;" src="http://francoislaberge.com/shrinkray/images/mini-paint-app.png"/>
             </a>
         </td>
+
     </tr>
     <tr>
+        <td>https://github.com/francoislaberge/draw.io</td>
         <td>https://github.com/francoislaberge/regulex</td>
         <td>https://github.com/francoislaberge/mini-paint</td>
     </tr>
