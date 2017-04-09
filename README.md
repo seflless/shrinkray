@@ -30,9 +30,9 @@ Create desktop apps in Javascript. Lightweight alternative to Electron because o
         </td>
     </tr>
     <tr>
-        <td>https://github.com/francoislaberge/draw.io</td>
-        <td>https://github.com/francoislaberge/regulex</td>
-        <td>https://github.com/francoislaberge/mini-paint</td>
+        <td><a href="https://github.com/francoislaberge/draw.io">Github Repo</a></td>
+        <td><a href="https://github.com/francoislaberge/regulex">Github Repo</a></td>
+        <td><a href="https://github.com/francoislaberge/mini-paint">Github Repo</a></td>
     </tr>
 </table>
 
