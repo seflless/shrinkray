@@ -9,6 +9,7 @@
 #ifndef tiny_h
 #define tiny_h
 
-int serveFiles(char* dir, int port);
+int getPort();
+pid_t serveFiles(char* dir, int port);
 
 #endif /* tiny_h */

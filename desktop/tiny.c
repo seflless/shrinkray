@@ -40,11 +40,10 @@ struct {
     {"htm", "text/html" },
     {"html","text/html" },
     {"css","text/css" },
-    
     {"xml","application/octet-stream" },
     {"js","text/javascript" },
     {0,0} };
-const char* genericMimetype= "application/octet-stream";
+char* genericMimetype= "application/octet-stream";
 
 void logger(int type, char *s1, char *s2, int socket_fd)
 {
@@ -76,7 +75,8 @@ void logger(int type, char *s1, char *s2, int socket_fd)
 /* this is a child web server process, so we can exit on errors */
 void web(int fd, int hit)
 {
-    int j, file_fd, buflen;
+    int j, file_fd;
+    unsigned long buflen;
     long i, ret, len;
     char * fstr;
     static char buffer[BUFSIZE+1]; /* static so zero filled */
@@ -113,9 +113,7 @@ void web(int fd, int hit)
     
     
     
-    // Disabled original code to support any file extension
-    fstr = genericMimetype;
-    /*fstr = (char *)0;
+    fstr = (char *)0;
     for(i=0;extensions[i].ext != 0;i++) {
         len = strlen(extensions[i].ext);
         if( !strncmp(&buffer[buflen-len], extensions[i].ext, len)) {
@@ -123,8 +121,13 @@ void web(int fd, int hit)
             break;
         }
     }
-    if(fstr == 0) logger(FORBIDDEN,"file extension type not supported",buffer,fd);
-    */
+    
+    // Disable old code that fails unknown file types, instead serve up generic file type when it's not known
+    if(fstr==0){
+        fstr = genericMimetype;
+    }
+    //if(fstr == 0) logger(FORBIDDEN,"file extension type not supported",buffer,fd);
+    
     
     if(( file_fd = open(&buffer[5],O_RDONLY)) == -1) {  /* open the file for reading */
         logger(NOTFOUND, "failed to open file",&buffer[5],fd);
@@ -145,9 +148,34 @@ void web(int fd, int hit)
     exit(1);
 }
 
+int getPort(){
+    struct sockaddr_in sin;
+    int _socket, port = 0;
+    
+    _socket = socket(AF_INET, SOCK_STREAM, 0);
+    if(_socket == -1)
+        return -1;
+    
+    sin.sin_port = htons(port);
+    sin.sin_addr.s_addr = 0;
+    sin.sin_addr.s_addr = INADDR_ANY;
+    sin.sin_family = AF_INET;
+    
+    if (bind(_socket, (struct sockaddr *)&sin, sizeof(struct sockaddr_in)) == -1) {
+        if (errno == EADDRINUSE)
+            printf("Port in use");
+        return -1;
+    }
+    
+    struct sockaddr_in _sin;
+    socklen_t len = sizeof(_sin);
+    if (getsockname(_socket, (struct sockaddr *)&_sin, &len) != -1){
+            return (int)_sin.sin_port;
+    }
+    return -1;
+}
 
-
-int serveFiles(char* dir, int port)
+pid_t serveFiles(char* dir, int port)
 {
     int i, pid, listenfd, socketfd, hit;
     socklen_t length;
@@ -165,15 +193,19 @@ int serveFiles(char* dir, int port)
         (void)printf("ERROR: Can't Change to directory %s\n",dir);
         exit(4);
     }
+    
     // Become deamon + unstopable and no zombies children (= no wait())
-    if(fork() != 0)
-        return 0; // parent returns OK to shell
+    pid_t childPid = fork();
+    if(childPid != 0){
+        return childPid;
+    }
     
     (void)signal(SIGCLD, SIG_IGN); // ignore child death
     (void)signal(SIGHUP, SIG_IGN); // ignore terminal hangups
-    //for(i=0;i<32;i++)
-//        (void)close(i);    // close open files
-    (void)setpgrp();    // break away from process group
+    for(i=0;i<32;i++)
+        (void)close(i);    // close open files
+        // Don't want processes to become daemons, or they will keep running after the main application closes
+    //(void)setpgrp();    // break away from process group
     
     logger(LOG,"nweb starting", port, getpid());
     
