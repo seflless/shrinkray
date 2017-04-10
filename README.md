@@ -11,30 +11,16 @@ Create desktop apps in Javascript. Lightweight alternative to Electron because o
 
 #### Example Apps
 
-<table>
-    <tr>
-        <td>
-            <a href="https://github.com/francoislaberge/draw.io/releases/download/v7.0.0/drawio.app.zip">
-                <img style="float:left;" src="http://francoislaberge.com/shrinkray/images/drawio-app.png"/>
-            </a>
-        </td>
-        <td>
-            <a href="https://github.com/francoislaberge/regulex/releases/download/v1.0.0/regulex.app.zip">
-                <img src="http://francoislaberge.com/shrinkray/images/regulex-app.png"/>
-            </a>
-        </td>
-        <td>
-            <a href="https://github.com/francoislaberge/mini-paint/releases/download/v1.0.0/mini-paint.app.zip">
-                <img style="float:left;" src="http://francoislaberge.com/shrinkray/images/mini-paint-app.png"/>
-            </a>
-        </td>
-    </tr>
-    <tr>
-        <td><a href="https://github.com/francoislaberge/draw.io">Github Repo</a></td>
-        <td><a href="https://github.com/francoislaberge/regulex">Github Repo</a></td>
-        <td><a href="https://github.com/francoislaberge/mini-paint">Github Repo</a></td>
-    </tr>
-</table>
+<a href="https://github.com/francoislaberge/draw.io/releases/download/v7.0.0/drawio.app.zip">
+    <img style="float:left" width="33%" src="http://francoislaberge.com/shrinkray/images/drawio-app.png"/>
+</a>
+<a href="https://github.com/francoislaberge/regulex/releases/download/v1.0.0/regulex.app.zip">
+    <img style="float:left;" width="33%" src="http://francoislaberge.com/shrinkray/images/regulex-app.png"/>
+</a>
+<a href="https://github.com/francoislaberge/mini-paint/releases/download/v1.0.0/mini-paint.app.zip">
+    <img style="float:left;" width="33%" src="http://francoislaberge.com/shrinkray/images/mini-paint-app.png"/>
+</a>
+
 
 
 
