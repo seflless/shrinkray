@@ -6,7 +6,7 @@ Create desktop apps in Javascript. Lightweight alternative to Electron because o
  - [x] Tiny App sizes (macOS: < 100K, Windows: N/A)
  - [x] Debuggable (Right-click window, select "Inspect Element")
  - [ ] Fullscreen API
- - [ ] File Read/Write
+ - [ ] File Read/Write API
  - [ ] Menu API
 
 #### Installation
