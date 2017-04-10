@@ -2,12 +2,12 @@
 Create desktop apps in Javascript. Lightweight alternative to Electron because of only supporting macOS (for now).
 
 *Features*
- - [ ] CLI for converting static website into a macOS app.
+ - [x] CLI for converting static website into a macOS app.
  - [x] Tiny App sizes (macOS: < 100K, Windows: N/A)
  - [x] Debuggable (Right-click window, select "Inspect Element")
  - [ ] Fullscreen API
  - [ ] File Read/Write
- - [ ] Menu
+ - [ ] Menu API
 
 #### Installation
 
