@@ -9,21 +9,6 @@ Create desktop apps in Javascript. Lightweight alternative to Electron because o
  - [ ] File Read/Write
  - [ ] Menu
 
-#### Example Apps
-
-<a href="https://github.com/francoislaberge/draw.io/releases/download/v7.0.0/drawio.app.zip">
-    <img style="float:left" width="33%" src="http://francoislaberge.com/shrinkray/images/drawio-app.png"/>
-</a>
-<a href="https://github.com/francoislaberge/regulex/releases/download/v1.0.0/regulex.app.zip">
-    <img style="float:left;" width="33%" src="http://francoislaberge.com/shrinkray/images/regulex-app.png"/>
-</a>
-<a href="https://github.com/francoislaberge/mini-paint/releases/download/v1.0.0/mini-paint.app.zip">
-    <img style="float:left;" width="33%" src="http://francoislaberge.com/shrinkray/images/mini-paint-app.png"/>
-</a>
-
-
-
-
 #### Installation
 
 ```
@@ -37,6 +22,23 @@ will be copied into the generated app and accessible.
 ```
 shrinkray -i <project>/html -o example.app
 ```
+
+#### Example Apps
+
+<a href="https://github.com/francoislaberge/draw.io/releases/download/v7.0.0/drawio.app.zip">
+    <img style="float:left" src="http://francoislaberge.com/shrinkray/images/drawio-app.png"/>
+</a>
+Source code: <a href="https://github.com/francoislaberge/draw.io">github.com/francoislaberge/draw.io</a>
+
+<a href="https://github.com/francoislaberge/regulex/releases/download/v1.0.0/regulex.app.zip">
+    <img style="float:left;" src="http://francoislaberge.com/shrinkray/images/regulex-app.png"/>
+</a>
+Source code: <a href="https://github.com/francoislaberge/regulex">github.com/francoislaberge/regulex</a>
+
+<a href="https://github.com/francoislaberge/mini-paint/releases/download/v1.0.0/mini-paint.app.zip">
+    <img style="float:left;" src="http://francoislaberge.com/shrinkray/images/mini-paint-app.png"/>
+</a>
+Source code: <a href="https://github.com/francoislaberge/mini-paint">github.com/francoislaberge/mini-paint</a>
 
 ### Contributing
 
