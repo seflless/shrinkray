@@ -1,4 +1,5 @@
 #### Todo
+  - [ ] Fix it so that it will replace existing .app files (Or at least warn and not do it unless -f is passed)
   - [ ] Clean up warnings in desktop.xcodeproj
   - [ ] Figure out a better workflow such that you can npm link shrinkray locally and it will work
   - [ ] Get draw.io wrapped once we have the embedded server. Also strip draw.io down even further to make it lean
