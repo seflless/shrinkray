@@ -2,41 +2,12 @@
 Create desktop apps in Javascript. Lightweight alternative to Electron because of only supporting macOS (for now).
 
 *Features*
- - [ ] CLI for converting static website into a macOS app.
+ - [x] CLI for converting static website into a macOS app.
  - [x] Tiny App sizes (macOS: < 100K, Windows: N/A)
  - [x] Debuggable (Right-click window, select "Inspect Element")
  - [ ] Fullscreen API
- - [ ] File Read/Write
- - [ ] Menu
-
-#### Example Apps
-
-<table>
-    <tr>
-        <td>
-            <a href="https://github.com/francoislaberge/draw.io/releases/download/v7.0.0/drawio.app.zip">
-                <img style="float:left;" src="http://francoislaberge.com/shrinkray/images/drawio-app.png"/>
-            </a>
-        </td>
-        <td>
-            <a href="https://github.com/francoislaberge/regulex/releases/download/v1.0.0/regulex.app.zip">
-                <img src="http://francoislaberge.com/shrinkray/images/regulex-app.png"/>
-            </a>
-        </td>
-        <td>
-            <a href="https://github.com/francoislaberge/mini-paint/releases/download/v1.0.0/mini-paint.app.zip">
-                <img style="float:left;" src="http://francoislaberge.com/shrinkray/images/mini-paint-app.png"/>
-            </a>
-        </td>
-    </tr>
-    <tr>
-        <td><a href="https://github.com/francoislaberge/draw.io">Github Repo</a></td>
-        <td><a href="https://github.com/francoislaberge/regulex">Github Repo</a></td>
-        <td><a href="https://github.com/francoislaberge/mini-paint">Github Repo</a></td>
-    </tr>
-</table>
-
-
+ - [ ] File Read/Write API
+ - [ ] Menu API
 
 #### Installation
 
@@ -51,6 +22,26 @@ will be copied into the generated app and accessible.
 ```
 shrinkray -i <project>/html -o example.app
 ```
+
+#### Example Apps
+
+##### Draw.io
+<a href="https://github.com/francoislaberge/draw.io">Source code</a>
+<a href="https://github.com/francoislaberge/draw.io/releases/download/v7.0.0/drawio.app.zip">
+    <img style="float:left" src="http://francoislaberge.com/shrinkray/images/drawio-app.png"/>
+</a>
+
+##### Regulex
+<a href="https://github.com/francoislaberge/regulex">Source code</a>
+<a href="https://github.com/francoislaberge/regulex/releases/download/v1.0.0/regulex.app.zip">
+    <img style="float:left;" src="http://francoislaberge.com/shrinkray/images/regulex-app.png"/>
+</a>
+
+##### Mini Paint
+<a href="https://github.com/francoislaberge/mini-paint">Source code</a>
+<a href="https://github.com/francoislaberge/mini-paint/releases/download/v1.0.0/mini-paint.app.zip">
+    <img style="float:left;" src="http://francoislaberge.com/shrinkray/images/mini-paint-app.png"/>
+</a>
 
 ### Contributing
 
