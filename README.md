@@ -27,18 +27,21 @@ shrinkray -i <project>/html -o example.app
 
 ##### Draw.io
 <a href="https://github.com/francoislaberge/draw.io">Source code</a> (Click thumbnail to download app)
+</br>
 <a href="https://github.com/francoislaberge/draw.io/releases/download/v7.0.0/drawio.app.zip">
     <img width="50%" src="http://francoislaberge.com/shrinkray/images/drawio-app.png"/>
 </a>
 
 ##### Regulex
 <a href="https://github.com/francoislaberge/regulex">Source code</a> (Click thumbnail to download app)
+</br>
 <a href="https://github.com/francoislaberge/regulex/releases/download/v1.0.0/regulex.app.zip">
     <img width="50%" src="http://francoislaberge.com/shrinkray/images/regulex-app.png"/>
 </a>
 
 ##### Mini Paint
 <a href="https://github.com/francoislaberge/mini-paint">Source code</a> (Click thumbnail to download app)
+</br>
 <a href="https://github.com/francoislaberge/mini-paint/releases/download/v1.0.0/mini-paint.app.zip">
     <img width="50%" src="http://francoislaberge.com/shrinkray/images/mini-paint-app.png"/>
 </a>
