@@ -14,6 +14,8 @@
 	- app name
 	- file extensions
 	- Reference: [electron-builder](https://github.com/electron-userland/electron-builder)
+  - Research other similar approaches before spending too much time on this
+    - https://nodekit.io/ (This looks pretty impressive)
 
 ### Done
 - [x] Create npm module and cli that gets basic functionality working
