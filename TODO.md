@@ -16,6 +16,7 @@
 	- Reference: [electron-builder](https://github.com/electron-userland/electron-builder)
   - Research other similar approaches before spending too much time on this
     - https://nodekit.io/ (This looks pretty impressive)
+    - https://github.com/zserge/webview/blob/master/README.md
 
 ### Done
 - [x] Create npm module and cli that gets basic functionality working
